@@ -67,6 +67,12 @@ int is_clean(char* str) {
   // greater than the second.
   result = strcmp(str, cleaned);
 
+  // Code added by Jacob. Check if cleaned is empty
+  // and if it is not, call free on cleaned
+  if (strcmp(cleaned, "") > 0) {
+  	free(cleaned);
+  }
+
   return result == 0;
 }
 
